@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="main position-relative d-flex flex-column justify-content-center align-items-center w-100">
+                 <h1 class="py-5 my-3 position-relative z-2">Bookmarker</h1>
+                 <div class="my_form border-top border-bottom border-black py-3 w-100 ">
+                    <h3 class="text-center"><span><i class="fa-solid fa-bookmark"></i></span>  Bookmark your favorite sites  <span><i class="fa-solid fa-bookmark"></i></span></h3>
+                    <form action="" class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="name_input w-100 py-3">
+                            <label for="name_input" class="d-block ">
+                                <i class="fa-solid fa-book-bookmark"></i>
+                                <p class="mb-1 mt-2 d-inline">Site Name</p>
+                                </label>
+                                <input type="text" placeholder="Bookmark Name" class="d-block w-100 form-control " id="name_input">
+                        </div>
+                        <div class="URL_input w-100 py-3">
+                            <label for="URL_input"class="d-block ">
+                                <i class="fa-solid fa-link"></i>
+                                <p class="mb-1 mt-2 d-inline">Site URL</p>
+                                </label>
+                                <input type="text" placeholder="Website URL" class="d-block w-100 form-control" id="URL_input">
+                        </div>
+                        <button type="button" class="btn btn-danger px-5" id="my_submit_btn">submit</button>
+                    </form>
+
+                 </div>
+                 <table class="text-center bg-white w-100 mt-4 " id="displayed_table">
+                    <td class="text-center d-flex justify-content-center align-items-center ">
+                        
+                    </td>
+                 </table>
+            </div>
+           <div class=" d-none  warning_letter_div d-flex justify-content-center align-items-center position-absolute start-0 top-0 w-100 h-100"id="my_error_message">
+             <div class="content_div shadow-lg p-4 rounded-2 bg-white" >
+                <div class="circles_and_close d-flex justify-content-between">
+                    <div class="circles d-flex">
+                        <div class="rounded-circle bg-primary me-2 "></div>
+                        <div class="rounded-circle bg-danger me-2"></div>
+                        <div class="rounded-circle bg-warning me-2"></div>
+                    </div>
+                    <button class="border-0"  type="button" onclick="close_func()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <p>Site Name or Url is not valid, Please follow the rules below :</p>
+                <ul class="list-unstyled">
+                    <li class="d-flex my-3">
+                        <i class="fa-regular fa-circle-right text-danger position-relative me-2"></i>
+                        <p  class="my-0">Site name must contain at least 3 characters</p>
+                    </li>
+                    <li class="d-flex my-3">
+                        <i class="fa-regular fa-circle-right text-danger position-relative me-2"></i>
+                        <p class="my-0">Site URL must be a valid one</p>
+                    </li>
+                </ul>
+             </div>
+           </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+    <script src="javascript/myJS.js"></script>
+</body>
+</html>
